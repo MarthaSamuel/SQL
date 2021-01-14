@@ -1,0 +1,33 @@
+Drop table INSTRUCTOR;
+-- or
+Delete table INSTRUCTOR;
+
+Create table INSTRUCTOR (
+	ins_id INTEGER  PRIMARY KEY NOT NULL ,
+	lastname  VARCHAR(23) NOT NULL ,
+	firstname VARCHAR(23) NOT NULL ,
+	country CHAR(2),
+	city VARCHAR(23)
+	);
+
+Insert into INSTRUCTOR
+	(ins_id, lastname, firstname, city, country)
+	VALUES
+	(1, 'Ahuja', 'Rav', 'Toronto', 'CA') ,
+	(2, 'Chong', 'Raul', 'Toronto', 'CA') ,
+	(3, 'Vasudevan', 'Hima', 'Chicago', 'US') ; 
+
+Select * from INSTRUCTOR;
+
+Select firstname, lastname, country from INSTRUCTOR
+	where city = 'Toronto' ;
+	
+Update INSTRUCTOR
+	Set city='Markham'
+	where ins_id=1;
+	
+Delete from INSTRUCTOR
+	where ins_id=2;
+	
+Select * from INSTRUCTOR;
+	
